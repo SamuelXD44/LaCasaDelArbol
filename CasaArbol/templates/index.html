@@ -1,59 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="{% static 'css/Style.css' %}" rel="stylesheet">
+<html lang="es">
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | La Casita del árbol</title>
+    <meta name="description" content="estesitioesunaongdescripcion">
+    <link rel="shortcout icon" href="{% static 'media/favic.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <section class="content">
-      <h2>PROYECTOS</h2>
-      <div id="banner"></div>
-    </section>
-    <section class="container">
-      <div class="row filauno align-items-start">
-        <div class="col-4 ">
-        <h1>Creando condiciones de vida positivas para los niños.</h1>
-        </div>
-        <div class="col-8">
-        <p>Tenemos muy en claro que los niños son el futuro y son quienes estan expuestos a la realidad que hoy nos rodea.<br>La falta de oportunidades, la falta de acompañamiento, en muchos casos, de sus propias familias, pueden afectarlos y llevarlos a un consumo problemático por la situación de vulnerabilidad en la que viven. Es necesario brindarle posibilidades para lograr una estabilidad emocional, afectiva y social como es el compartir con sus pares una mesa o un juego.</p>
-        </div>
-      </div>
-
-      <div class="row filados align-items-start">
-        <div class="col-3  p-3 border rounded-3">
-          <img src="{% static 'media/huerta1.png' %}" width="100" height="100">
-          <h1>Manos a la Huerta</h1>
-          <p>Hoy día nuestra huerta nos posibilita muchas cosas. De alli sacamos verduras para las comidas y nos conforta saber que fue producido por y para los niños.</p>
-          </div>
-        <div class="col-3  p-3 border rounded-3">
-          <img src="{% static 'media/hockey.png' %}" width="100" height="100">
-          <h1>Clases de Hockey</h1>
-          <p>El deporte es el mejor medio inclusivo y gracias a los profesores que dictan las clases se pudo implementar. Los chicos ahora esperan con ansias el dia de la clase o los encuentros deportivos que tenemos la dicha de llevarlos a competir.</p>
-        </div>
-        <div class="col-3  p-3 border rounded-3">
-          <img src="{% static  'media/clases.png' %}" width="100" height="100">
-          <h1>Apoyo Escolar</h1>
-          <p>El momento antes de la merienda es dedicado al estudio. La educación aparece entre risas y juegos, intentando reforzar el aprendizaje en ellos.
-          </p>
-        </div>
-        <div class="col-3  p-3 border rounded-3">
-            <img src="{% static 'media/tapitas.jpg' %}" width="100" height="100">
-            <h1> Recicla </h1>
-            <p>A traves de este proyecto estamos reciclando tapitas, latas y botellas.</p>
-            
-        </div>
-      </div>
-    </section>
-
+<body>
     
-  </body>
+<!--Banner-->
+    <section class="banner">
+        <h2>Llevando bienestar a los niños de nuestra comunidad</h2>
+    </section>
+
+<!--Contenido-->
+    <section class="content">
+        <aside class="izquierda">
+            <div class="contactobnr">
+                <h4>Contacto</h4>
+                <div class="gcnt"><img src="{% static 'media/facebook.svg' %}" alt=""><h5>"La casita del Árbol Ayala"</h5></div>
+                <div class="gcnt"><img src="{% static 'media/correo.svg' %}" alt=""><h6>ernestoayala444@gmail.com</h6></div>
+            </div>
+            <div class="imgchicos"></div>
+        </aside>
+        
+            <section class="grup">
+                <div class="grupsub">
+                    <div class="imguno"></div>
+                    <div class="gtext">
+                        <h3>¿Quienes Somos?</h3>
+                        <h5>Comprometidos con el bienestar y buen desarrollo de los niños.</h5>            
+                        <button class="btnlm">Leer más</button>
+                    </div>
+                </div>
+                <div class="grupsub">
+                    <div class="imgdue"></div>
+                    <div class="gtext">
+                        <h3>Nuestros proyectos</h3>
+                        <h5>Los niños son el futuro y son quienes estan expuestos a la realidad que hoy nos rodea.</h5>
+                        <button class="btnlm">Leer más</button>
+                    </div>
+                </div>
+                <div class="grupsub">
+                    <div class="imgtre"></div>
+                    <div class="gtext">
+                        <h3>Ultimos eventos</h3>
+                        <h5>Entérate sobre lo que hacemos y los próximos eventos programados.</h5> 
+                        <button class="btnlm">Leer más</button>
+                    </div>
+                </div>
+            </section>
+        
+        <aside class="derecha">
+            <div class="arriba">
+                <div class="ubi">
+                    <div id="ubi"></div>
+                    <div><h4>Ubicación</h4><h5>Barrio 29 de agosto, Resistencia, Chaco, Argentina.</h5></div>
+                </div>                
+
+                <div id="map"></div>
+            </div>
+            <div class="anundon">
+                <div class="txtdon">
+                    <div id="cora"></div>
+                    <h5>Con tu donación, nos ayudarás a beneficiar a más jovenes.</h5>
+                </div>                
+                <div class="don2"><button class="donmin">Donar</button></div>
+            </div>
+        </aside>
+        <aside class="izquierda bajomob">
+            <div class="contactobnr">
+                <h4>Contacto</h4>
+                <div class="gcnt"><img src="{% static 'media/facebook.svg' %}" alt=""><h5>"La casita del Árbol Ayala"</h5></div>
+                <div class="gcnt"><img src="{% static 'media/correo.svg' %}" alt=""><h6>ernestoayala444@gmail.com</h6></div>
+            </div>
+            <div class="imgchicos"></div>
+        </aside>
+    </section>
+</body>
+
 </html>

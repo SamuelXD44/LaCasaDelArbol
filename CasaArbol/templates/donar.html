@@ -1,3 +1,77 @@
+
+{% extends 'base.html '%}
+{% load static %}
+{% block contenido%}
+<html>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <!-- Bootstrap CSS -->
+ <link href="{% static 'css/donar.css' %}" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<title>Donar</title>
+
+    <body>
+        <section class="content">
+            <h2>Donar</h2>
+            <div id="banner"></div>
+        </section>
+        <div class="primerparrafo">
+            <h3>AYUDANOS A AYUDAR,CON TU DONACION LO VAMOS A LOGRAR</h3>
+            <p>
+                Poder donar aqui,al hacer clic lo rediccionara al enlace de mercado pago correspondiente:
+            </p>
+        </div>
+        <div class="cuadrosdonar">
+            <div class="cuadro uno">
+                <a class='link' href="mercado pago link">DONAR $100</a>
+            </div>   
+            <div class="cuadro dos">
+                <a class='link' href="mercado pago link">DONAR $200</a>
+            </div> 
+            <div class="cuadro tres">
+                <a class='link' href="mercado pago link">DONAR $300</a>
+            </div> 
+            <div class="cuadro cuatro">
+                <a class='link' href="mercado pago link">DONAR $400</a>
+            </div>   
+            <div class="cuadro cinco">
+                <a class='link' href="mercado pago link">DONAR $500</a>
+            </div> 
+            <div class="cuadro seis">
+                <a class='link' href="mercado pago link">DONAR $600</a>
+            </div> 
+            <div class="cuadro siete">
+                <a class='link' href="mercado pago link">DONAR $1000</a>
+            </div>   
+            <div class="cuadro ocho">
+                <a class='link' href="mercado pago link">DONAR $2000</a>
+            </div> 
+            <div class="cuadro nueve">
+                <a class='link' href="mercado pago link">DONAR $3000</a>
+            </div> 
+        </div>
+        <div class="segundoparrafo">
+            <p>
+                Donacion a travez de mercado pago al numero 3624-082451<br>
+                CVU mercado pago<br>
+                0000003100051311090815<br>
+                Alias: dual.amago.cargo.mp<br><br>
+
+                O tambien poder donar dinero por TRASFERENCIA BANCARIA a la cuenta de la FUNDACION<br>
+                Nro de cuenta:111369/OOCBU: 3110030211000111369005<br>
+                CUIT N° 30-71686078-0<br>
+            </p>
+        </div>
+            
+        {% endblock %}
+    </body>
+</html>
+=======
 {% extends 'base.html '%}
 {% load static %}
 {% block contenido%}
@@ -70,3 +144,4 @@
         {% endblock %}
     </body>
 </html>
+

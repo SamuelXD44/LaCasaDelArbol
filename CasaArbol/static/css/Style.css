@@ -20,7 +20,7 @@ body{
 #banner{
     width: 40vw;
     height: 100%;
-    background-image: url(/Imagenes/manos.jpg);
+    background-image: url(../media/manos.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;

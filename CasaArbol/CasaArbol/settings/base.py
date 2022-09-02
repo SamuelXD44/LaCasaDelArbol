@@ -25,13 +25,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-4(ff5c!l7e40%9c%ciz2+cg2=8jvcvu)mpw11ppxq@jkk$2obi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = TRUE
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/'
 
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -43,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.noticias',
-    'apps.eventos'
+    'apps.eventos',
+    'apps.contacto',
+    'apps.login'
 ]
 
 MIDDLEWARE = [
@@ -58,10 +62,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'CasaArbol.urls'
 
+TEMPLATES_DIR=os.path.join(os.path.dirname(BASE_DIR),'templates')
+TEMPLATES_CONTACTO=os.path.join(os.path.dirname(BASE_DIR),'templates/contacto')
+TEMPLATES_EVENTOS= os.path.join(os.path.dirname(BASE_DIR),'templates/evento')
+TEMPLATE_REGISTRATION = os.path.join(os.path.dirname(BASE_DIR),'templates/registration')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'templates')],
+        'DIRS': [TEMPLATES_DIR,TEMPLATES_CONTACTO,TEMPLATES_EVENTOS,TEMPLATE_REGISTRATION],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,3 +142,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Configuracion de email
+EMAIL_BACKEND= 'django.core.backends.smtp.Email.Backend'
+EMAIL_HOST="smtp.office365.com"
+EMAIL_USE_STARTTLS= True
+EMAIL_PORT=587
+EMAIL_HOST_USER="neron41@hotmail.com"
+EMAIL_HOST_PASSWORD=""
