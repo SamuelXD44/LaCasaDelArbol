@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'apps.noticias',
     'apps.eventos',
     'apps.contacto',
-    'apps.login'
+    'apps.login',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
