@@ -358,8 +358,15 @@ nav > .cierre {
     flex-direction: column;
 }
 .juan{
+   display: none;
+   visibility: hidden;
+}
+.login:hover >.jo{
     position: absolute;
     margin-top: 42px;
-    background: white;
+    background: rgb(231, 173, 118);
+} 
+.bd{
+    
 }
 

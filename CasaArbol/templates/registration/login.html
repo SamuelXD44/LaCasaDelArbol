@@ -1,22 +1,27 @@
 {% extends 'base.html '%}
 {% load static %}
-
+{% block head %}
+<title>Login</title>
+<link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
 {% block contenido %}
 
 <body>    
         
-    <div class="contenedorFormulario">
+    <div class="contenedorregistro">
         <div class="row" >
-            <div class="col-12 col-md-6 offset-md-3">
+            <div class="col-15 col-md-8 offset-md-4">
                 
                 <div class="card">
                     <div class="card-body>"</div>
-                    <h2>Ingresa tus credenciales</h2>
+                    <br>
+                    <h2>Ingresa tu usuario</h2>
+                    <br>
                     <hr>
                     <form action ="" method="POST" >
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <a href="{% url 'index' %}" >Ir al home</a>
+                        <a href="{% url 'index' %}" >Inicio</a>
                         <a href="{% url 'login' %}" >Iniciar sesion</a>
                         <input type="submit" value="registrar" class="btn btn-success float-right">
                     </form>

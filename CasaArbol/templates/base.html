@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="16x16">
         <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="32x32">
         <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="96x96">
-        <link rel="stylesheet" href= "{% static 'css/base.css' %}">
+        <link rel="stylesheet" href= "{% static 'css/base1.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 
         {% endblock %}
     </head>
-<body>
+<body class="bd">
 <!-- Menu-->
 
 <header id="header">   
@@ -43,7 +43,7 @@
             <div class="logydon">
                 <nav class="cierre">
                     <svg href="{% url 'login' %}" class="login" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: #f98012;;transform: msFilter"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
-                <ul class="juan">
+                <ul class="juan jo">
                     {% if user.is_authenticated %}
                     <li>
                         <a href="{% url 'logout' %}">Cerrar sesion</a>
