@@ -4,7 +4,7 @@
 {% block contenido %}
 
 <body>    
-        
+    {% load crispy_forms_tags %}
     <div class="contenedorFormulario">
         <div class="row" >
             <div class="col-12 col-md-6 offset-md-3">
@@ -15,7 +15,7 @@
                     <hr>
                     <form action ="" method="POST" >
                         {% csrf_token %}
-                        {{ formulario.as_table }}
+                        {{ formulario | crispy }}
                         <a href="{% url 'index' %}" >Ir al home</a>
                         <a href="{% url 'login' %}" >Iniciar sesion</a>
                         <input type="submit" value="registrar" class="btn btn-success float-right">

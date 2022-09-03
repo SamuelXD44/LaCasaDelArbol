@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'django-insecure-4(ff5c!l7e40%9c%ciz2+cg2=8jvcvu)mpw11ppxq@jkk$2obi'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = TRUE
@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'apps.noticias',
     'apps.eventos',
     'apps.contacto',
-    'apps.login'
+    'apps.login',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
