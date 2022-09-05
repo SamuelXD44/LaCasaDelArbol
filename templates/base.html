@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/proyectofinalInfo/Maquetado/images/Logo.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="{% static 'media/Logo.png' %}" sizes="16x16">
+        <link rel="icon" type="image/png" href="{% static 'media/Logo.png' %}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{% static 'media/Logo.png' %}" sizes="96x96">
         <link rel="stylesheet" href= "{% static 'css/base1.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,6 @@
                 {% else %}
                 <a href="{% url 'login' %}">
                     <svg class="login" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: #f98012;;transform: msFilter"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
-   
                 </a>
                 
                 {% endif %}
@@ -75,7 +74,13 @@
                         <li><a class="menu__item" href="{% url 'notices' %}">Novedades</a></li>
                         <li><a class="menu__item" href="{% url 'contacto' %}">Contacto</a></li>
                         <li><a class="menu__item" href="{% url 'donar' %}">Donar</a></li>
-                        <li><a class="menu__item" href="{% url 'login' %}">Iniciar Sesión</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a class="menu__item" href="{% url 'logout' %}">Cerrar sesión</a></li>
+                        {% else %}
+                        <li><a class="menu__item" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li><a class="menu__item" href="{% url 'registro' %}">Registrarse</a></li>
+                        {% endif %}
+                        
                         
                 </ul>
             </div>
