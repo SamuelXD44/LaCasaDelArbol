@@ -3,21 +3,23 @@ from urllib import request
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render, redirect
 from .models import Noticia, Comentario,Categoria
-from apps.eventos_app.models import Evento
 from django.contrib.auth.models import User
 from django.http.response import Http404
 from .forms import FormComment
 from django.contrib.auth.decorators import login_required
 
+def proyectos(request):
+    return render(request, 'proyectos.html')
+
+def donar(request):
+    return render(request, 'donar.html')
 
 def index(request):
     
     lista_noticias = Noticia.objects.all().order_by('-id')[:3]
-    lista_eventos = Evento.objects.all().order_by('-id')[:3]
     lista_user = User.objects.all()
     context = {
         "noticias": lista_noticias,
-        "eventos": lista_eventos,
         "Usuarios": lista_user
     }
     return render(request, 'index.html', context)
