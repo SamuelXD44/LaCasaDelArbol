@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<section>
+	<article>
+		<form method="post">
+			<h1 class='subTitulo'>Iniciar sesion</h1>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<div class="regin">
+			    <button type="submit" class="post" id="" >Iniciar sesion</button>
+				<p>¿No tienes una cuenta?</p><a href="{% url 'registro' %}"><button class="log">Crear Cuenta</button></a>
+		    </div>
+
+			
+		</form>
+	</article>
+</section>
+{% endblock %}
