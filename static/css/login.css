@@ -1,33 +1,71 @@
-input{
-    height: 20px;
-    width: 40vh; 
-    background-color: rgb(238, 204, 125);
-    border: solid #fff;
-    border-radius: 5px;
-}
-.contenedorregistro{
+main{
+    background-image: url(../media/collag.png);
+    background-size: contain;
+    background-position: center center;
+    mix-blend-mode: darken;
     display: flex;
-    flex-direction: column;
-    background-color:#F98012;
-    width: 78vh;
-    height: 47vh;
-    margin:10px auto;
-    border-radius: 10px;
-    padding: 2px;
-    box-shadow: 5px 5px 5px #5e4d3d;
+    justify-content: center;
+    height: 81vh;
+    align-items: center;
 }
-.btn.btn-success.float-right{
-    background-color: rgb(124, 120, 120);
-    height: 20px;
-    margin-top: 28vh;
-}
-.cont{
-    height: 100vh;
-    background-color:black;
-}
-form {
+article {
+    padding: 20px;
+      width:54vw;
+      border:1px solid #ccc;
+      border-radius:10px;
+      background:white;
+  box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  height: fit-content;
+  }
+.regin{
     display: flex;
-    height: 65vh;
-    flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
+.regin p{
+    margin-right: 10px;
+}
+.log{
+    background: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: 2px solid #f98012;
+    cursor: pointer;
+      font-size:12px;
+      border-radius:10px;
+    margin-left: 10px;
+}
+.log :hover{
+    opacity: 0.9;!important
+}
+h1{
+    margin-bottom: 10px;
+}
+p input{
+  width: 100%;
+  padding: 11px;
+  margin: 2px 0 12px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+}
+.post {
+    background-color: #f98012;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+      font-size:16px;
+      border-radius:10px;
+  }
+  button:hover {
+    opacity:1;
+  }
+
+  .Despedida{
+    width: 60px;
+    height: 60px;
+  }
